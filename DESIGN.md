@@ -25,6 +25,12 @@ typography:
     fontWeight: 400
     lineHeight: 1.02
     letterSpacing: "-.005em"
+  display-desktop:
+    fontFamily: "Cal Sans, Avenir Next, Segoe UI, system-ui, sans-serif"
+    fontSize: "96px"
+    fontWeight: 400
+    lineHeight: 1.02
+    letterSpacing: "-.005em"
   headline:
     fontFamily: "Cal Sans, Avenir Next, Segoe UI, system-ui, sans-serif"
     fontSize: "clamp(30px, 7.6vw, 48px)"
@@ -51,8 +57,15 @@ typography:
     fontSize: "18px"
     fontWeight: 400
     lineHeight: 1
+  wordmark-desktop:
+    fontFamily: "Cal Sans, Avenir Next, Segoe UI, system-ui, sans-serif"
+    fontSize: "25px"
+    fontWeight: 400
+    lineHeight: 1
 rounded:
+  focus: "6px"
   field: "10px"
+  panel: "16px"
   card: "24px"
   pill: "999px"
 spacing:
