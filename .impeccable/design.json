@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-20T00:00:00Z",
+  "title": "Design System: Home Again Cleaning Services",
+  "extensions": {
+    "colorMeta": {
+      "sparkle-gold": { "role": "primary", "displayName": "Sparkle Gold", "canonical": "#f5c64f", "tonalRamp": ["oklch(25% 0.06 85)", "oklch(36% 0.08 85)", "oklch(48% 0.10 85)", "oklch(60% 0.12 85)", "oklch(72% 0.14 86)", "oklch(84% 0.14 88)", "oklch(90% 0.10 90)", "oklch(96% 0.05 92)"] },
+      "sparkle-gold-light": { "role": "primary", "displayName": "Sparkle Gold Light", "canonical": "#ffd877" },
+      "gold-ink": { "role": "primary", "displayName": "Gold Ink", "canonical": "#7f5a00" },
+      "harbour-navy": { "role": "secondary", "displayName": "Harbour Navy", "canonical": "#1f4a7a", "tonalRamp": ["oklch(18% 0.05 254)", "oklch(28% 0.07 254)", "oklch(40% 0.09 254)", "oklch(52% 0.10 254)", "oklch(64% 0.09 254)", "oklch(76% 0.07 254)", "oklch(87% 0.04 254)", "oklch(95% 0.015 254)"] },
+      "deep-navy": { "role": "secondary", "displayName": "Deep Navy", "canonical": "#10233f", "tonalRamp": ["oklch(15% 0.04 258)", "oklch(25% 0.06 258)", "oklch(35% 0.07 258)", "oklch(47% 0.07 258)", "oklch(59% 0.06 258)", "oklch(71% 0.05 258)", "oklch(84% 0.03 258)", "oklch(95% 0.01 258)"] },
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#f4f6fb" },
+      "card": { "role": "neutral", "displayName": "Card White", "canonical": "#ffffff" },
+      "field": { "role": "neutral", "displayName": "Field Tint", "canonical": "#e6ecf5" },
+      "ink": { "role": "neutral", "displayName": "Ink Navy", "canonical": "#10233f" },
+      "body": { "role": "neutral", "displayName": "Body Slate", "canonical": "#2a3a4c" },
+      "soft": { "role": "neutral", "displayName": "Soft Slate", "canonical": "#4a5868" },
+      "on-dark": { "role": "neutral", "displayName": "On Dark", "canonical": "#f4f7fb" },
+      "on-dark-soft": { "role": "neutral", "displayName": "On Dark Soft", "canonical": "#c9d7ea" },
+      "line": { "role": "neutral", "displayName": "Hairline", "canonical": "rgba(16,35,63,.12)" },
+      "focus": { "role": "neutral", "displayName": "Focus Navy", "canonical": "#1f4a7a" },
+      "error": { "role": "neutral", "displayName": "Error Red", "canonical": "#b3261e" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero H1 only; 96px from 1024px; bounces in letter by letter." },
+      "headline": { "displayName": "Headline", "purpose": "Every section H2." },
+      "title": { "displayName": "Title", "purpose": "Claim rows, service rows, numbered steps." },
+      "lede": { "displayName": "Lede", "purpose": "Line under a headline, hero promise; 32-40ch." },
+      "body": { "displayName": "Body", "purpose": "Running text, inputs, footer; never below 16px." },
+      "label": { "displayName": "Label", "purpose": "Buttons, form labels, header contact link." }
+    },
+    "textures": [
+      { "name": "band-lines", "value": "repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.035) 22px 23px)", "purpose": "Deep navy bands, no-photo hero and footer only." }
+    ],
+    "shadows": [
+      { "name": "float-lift", "value": "0 10px 28px rgba(8,24,46,.3)", "purpose": "Floating message circle only." },
+      { "name": "pick-pulse", "value": "0 0 0 0 rgba(31,74,122,.55) -> 0 0 0 12px rgba(31,74,122,0), .9s ease-out, once", "purpose": "Chip pre-picked from a service row." }
+    ],
+    "motion": [
+      { "name": "letter-in", "value": "1s cubic-bezier(.34,1.56,.64,1), stagger 20ms, from opacity 0 translateX(50px)", "purpose": "Hero H1 bounce-in only." },
+      { "name": "rise", "value": ".4s ease-out, translateY(12px) + opacity", "purpose": "Once, only for elements starting below the first screen." },
+      { "name": "float-slide", "value": "transform .35s cubic-bezier(.2,.8,.2,1), from translateY(120px)", "purpose": "Floating circle show/hide." },
+      { "name": "state", "value": "colours .2s (fields .15s), press scale(.98) .12s", "purpose": "Button, chip and field state changes." }
+    ],
+    "breakpoints": [
+      { "name": "narrow", "value": "max-width:380px" },
+      { "name": "tablet", "value": "760px" },
+      { "name": "desktop", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Gold pill call to action; text is always ink navy.",
+      "html": "<a class=\"ds-btn ds-btn-primary\" href=\"#\">Get a free estimate</a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 26px;border-radius:999px;font:400 18px/1 \"Cal Sans\",\"Avenir Next\",\"Segoe UI\",system-ui,sans-serif;text-decoration:none;cursor:pointer;border:2px solid transparent;transition:background-color .2s,color .2s,border-color .2s,transform .12s}.ds-btn:active{transform:scale(.98)}.ds-btn-primary{background:#f5c64f;color:#10233f;border-color:#f5c64f}.ds-btn-primary:hover{background:#ffd877;border-color:#ffd877}.ds-btn-primary:focus-visible{outline:3px solid #1f4a7a;outline-offset:3px}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Outlined pill secondary action on navy bands.",
+      "html": "<div style=\"background:#1f4a7a;padding:24px\"><a class=\"ds-btn-ghost\" href=\"#\">See what we clean</a></div>",
+      "css": ".ds-btn-ghost{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 26px;border-radius:999px;font:400 18px/1 \"Cal Sans\",\"Avenir Next\",\"Segoe UI\",system-ui,sans-serif;text-decoration:none;background:transparent;color:#f4f7fb;border:2px solid rgba(244,247,251,.7);transition:background-color .2s,border-color .2s,transform .12s}.ds-btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1)}.ds-btn-ghost:active{transform:scale(.98)}.ds-btn-ghost:focus-visible{outline:3px solid #f5c64f;outline-offset:3px}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Borderless field on a tinted fill; navy border on hover/focus, red on error.",
+      "html": "<label class=\"ds-label\" for=\"ds-n\">Your name</label><input class=\"ds-input\" id=\"ds-n\" type=\"text\" placeholder=\"First name is fine\">",
+      "css": ".ds-label{display:block;margin-bottom:8px;font:400 18px/1.2 \"Cal Sans\",\"Avenir Next\",\"Segoe UI\",system-ui,sans-serif;color:#10233f}.ds-input{width:100%;font:16px/1.4 -apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Helvetica Neue\",Arial,sans-serif;color:#10233f;background:#e6ecf5;border:2px solid transparent;border-radius:10px;padding:13px 14px;min-height:52px;caret-color:#1f4a7a;transition:border-color .15s}.ds-input::placeholder{color:#4a5868}.ds-input:hover,.ds-input:focus{outline:none;border-color:#1f4a7a}"
+    },
+    {
+      "name": "Choice Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Radio as a pill; checked flips to ink fill.",
+      "html": "<div class=\"ds-chips\"><input type=\"radio\" name=\"ds-w\" id=\"ds-c1\" checked><label for=\"ds-c1\">Home cleaning</label><input type=\"radio\" name=\"ds-w\" id=\"ds-c2\"><label for=\"ds-c2\">Airbnb turnover</label></div>",
+      "css": ".ds-chips{display:flex;flex-wrap:wrap;gap:10px}.ds-chips input{position:absolute;width:1px;height:1px;opacity:0;margin:0}.ds-chips label{display:inline-flex;align-items:center;min-height:48px;padding:0 18px;border-radius:999px;background:#e6ecf5;border:2px solid transparent;font:16px/1 -apple-system,BlinkMacSystemFont,\"Segoe UI\",Arial,sans-serif;color:#10233f;cursor:pointer;transition:border-color .15s,background-color .15s,color .15s}.ds-chips label:hover,.ds-chips input:focus-visible+label{border-color:#1f4a7a}.ds-chips input:checked+label{background:#10233f;color:#fff}"
+    },
+    {
+      "name": "Form Card",
+      "kind": "card",
+      "refersTo": "form-card",
+      "description": "White 24px card on paper; the only card surface. No shadow.",
+      "html": "<div style=\"background:#f4f6fb;padding:24px\"><div class=\"ds-card\"><p class=\"ds-card-t\">Get your free estimate</p><p>We write the message and copy it.</p></div></div>",
+      "css": ".ds-card{background:#fff;border-radius:24px;padding:clamp(20px,5vw,32px);display:grid;gap:22px;max-width:600px;color:#2a3a4c;font:16px/1.7 -apple-system,BlinkMacSystemFont,\"Segoe UI\",Arial,sans-serif}.ds-card p{margin:0}.ds-card-t{font:400 30px/1.08 \"Cal Sans\",\"Avenir Next\",system-ui,sans-serif;color:#10233f}"
+    },
+    {
+      "name": "Header",
+      "kind": "nav",
+      "description": "Paper strip: two-line wordmark left, one contact link right. No menu.",
+      "html": "<header class=\"ds-top\"><a class=\"ds-brand\" href=\"#\"><b>Home Again</b><span>Cleaning Services</span></a><a class=\"ds-reach\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\"><path d=\"M4 5h16v11H9l-5 4z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Message us</a></header>",
+      "css": ".ds-top{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding:0 20px;background:#f4f6fb;color:#10233f}.ds-brand{display:flex;flex-direction:column;text-decoration:none;color:inherit;line-height:1}.ds-brand b{font:400 22px/1 \"Cal Sans\",\"Avenir Next\",system-ui,sans-serif}.ds-brand span{font:600 12px/1 -apple-system,\"Segoe UI\",Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#4a5868;margin-top:5px}.ds-reach{display:inline-flex;align-items:center;gap:8px;min-height:44px;font:400 18px/1 \"Cal Sans\",\"Avenir Next\",system-ui,sans-serif;text-decoration:none;color:inherit}.ds-reach svg{color:#1f4a7a}.ds-reach:hover{color:#1f4a7a}.ds-reach:focus-visible{outline:3px solid #1f4a7a;outline-offset:3px;border-radius:6px}"
+    },
+    {
+      "name": "Service Row",
+      "kind": "custom",
+      "description": "Full-width link row on textured deep navy; only the arrow changes on hover.",
+      "html": "<ul class=\"ds-rows\"><li><a class=\"ds-row\" href=\"#\">Home cleaning<span class=\"ds-arrow\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\"><path d=\"M5 12h14M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></a></li><li><a class=\"ds-row\" href=\"#\">Airbnb and vacation rental turnovers<span class=\"ds-arrow\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\"><path d=\"M5 12h14M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></a></li></ul>",
+      "css": ".ds-rows{list-style:none;margin:0;padding:12px 20px;background-color:#10233f;background-image:repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.035) 22px 23px)}.ds-rows li{border-top:1px solid rgba(255,255,255,.12)}.ds-rows li:last-child{border-bottom:1px solid rgba(255,255,255,.12)}.ds-row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px;padding:12px 0;text-decoration:none;color:#f4f7fb;font:400 22px/1.2 \"Cal Sans\",\"Avenir Next\",system-ui,sans-serif;outline:none}.ds-arrow{width:44px;height:44px;flex:none;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.1);color:#f4f7fb;transition:background-color .2s,color .2s}.ds-row:hover .ds-arrow{background:#f5c64f;color:#10233f}.ds-row:focus-visible .ds-arrow{background:#f5c64f;color:#10233f;outline:3px solid #f5c64f;outline-offset:3px}"
+    },
+    {
+      "name": "Floating Message Circle",
+      "kind": "custom",
+      "refersTo": "float-circle",
+      "description": "One 60px gold circle, bottom right; the only lifted element. Never a bottom bar.",
+      "html": "<a class=\"ds-float\" href=\"#\" aria-label=\"Message us\"><svg viewBox=\"0 0 24 24\" width=\"26\" height=\"26\"><path d=\"M4 5h16v11H9l-5 4z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-float{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:#f5c64f;color:#10233f;box-shadow:0 10px 28px rgba(8,24,46,.3);transition:transform .35s cubic-bezier(.2,.8,.2,1)}.ds-float:focus-visible{outline:3px solid #1f4a7a;outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Harbour Porch Light",
+    "overview": "A calm, warm home for a small local cleaner: an off-white page cut into full-bleed bands of harbour navy and deep navy, with one sparkle gold doing every warm job. Nothing on the page claims more than the business has. There are no photos, no logo, no reviews, so the system carries trust through colour, generous spacing, soft shapes and one confident display face. The gold comes from the sparkle in the owner's own post and is used the way a porch light is: one warm point on a dark ground, there to tell you where to go.\n\nDensity is low and phone-first. Each band holds one idea: who and where (hero), why trust them (care), what they clean (services), how to ask (estimate), and who they are (close). Shapes are borderless and rounded; depth comes from band contrast, not shadows. Motion is limited to a single hero entrance, a single quiet fade-up for content below the first screen, and small state feedback.\n\nThis build follows the pitch-site calm band style (lpmr.co.uk lineage) in its no-photo variant: the hero is the navy band with the diagonal line texture because no client photo exists.",
+    "keyCharacteristics": [
+      "Full-bleed bands alternate paper and navy so every new section is obvious.",
+      "One warm accent, gold, used as a fill; text on gold is always ink navy.",
+      "One display webfont (Cal Sans) for headings, buttons, labels and list rows; system stack for running text.",
+      "Soft, borderless geometry: 24px cards, 10px fields, full pills.",
+      "Flat surfaces; the only shadow belongs to the floating message circle.",
+      "Every contact point is wired through one config switch (Messenger today, call/text once a phone is set)."
+    ],
+    "rules": [
+      { "name": "The Porch Light Rule", "body": "Gold is a fill, never text on a light ground. Text on gold is Ink; gold-as-text on paper switches to Gold Ink. Gold-as-text appears only on navy bands.", "section": "colors" },
+      { "name": "The One Warm Point Rule", "body": "Each viewport carries at most one gold call to action (plus the floating circle, which hides whenever the form or the closing button is on screen). Gold is not used for decoration beyond the eyebrow dot and the dark-band accent phrase.", "section": "colors" },
+      { "name": "The Band Contrast Rule", "body": "Sections are separated by full-bleed colour change, not borders or cards: paper header, navy hero, paper, textured deep navy, paper, navy, textured deep navy footer.", "section": "colors" },
+      { "name": "The One Voice Rule", "body": "Cal Sans at weight 400 is the only display voice; hierarchy comes from size, never from bold display weights or a second display face.", "section": "typography" },
+      { "name": "The 16px Floor Rule", "body": "Nothing interactive or readable is set below 16px except the 12px wordmark subline and 14px optional-field hints.", "section": "typography" },
+      { "name": "The Flat Band Rule", "body": "No surface casts a shadow at rest except the floating circle. Cards and buttons are separated by fill, not lift.", "section": "elevation" },
+      { "name": "The Faint Texture Rule", "body": "The line texture stays at about 3.5% white or fainter so it never reads as lines through text.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do alternate full-bleed paper and navy bands, putting the line texture only on the deep navy (and the no-photo hero).",
+      "Do use Sparkle Gold as a fill with Ink text, and Gold Ink whenever gold has to be text on paper.",
+      "Do set headings, buttons, labels and list rows in Cal Sans 400 and everything else in the system stack at 16px / 1.7.",
+      "Do keep shapes soft and borderless: 24px cards, 10px fields on the Field tint, full pills, 44px+ tap targets.",
+      "Do route every new contact point through data-reach and CONFIG so the phone switch reaches it.",
+      "Do gate hover styles behind (hover:hover) and honour prefers-reduced-motion.",
+      "Do put a client photo behind the hero under a navy overlay if one later becomes available and fits both phone and desktop shapes."
+    ],
+    "donts": [
+      "Don't put white text on gold or gold text on paper; both fail contrast.",
+      "Don't add shadows to cards, buttons or chips; only the floating circle lifts.",
+      "Don't add a second accent colour, a second display face or bold display weights.",
+      "Don't apply the bounce-in to any heading other than the hero H1, or fade in anything already on the first screen.",
+      "Don't turn the floating circle into a bottom bar or show it over the form.",
+      "Don't add eyebrow pills beyond the two the build carries (see note below); they are an owner-approved exception, not a pattern to extend.",
+      "Don't invent photos, logos, reviews, prices or badges to fill space."
+    ]
+  }
+}
