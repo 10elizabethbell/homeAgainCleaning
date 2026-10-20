@@ -67,8 +67,9 @@ section{padding:64px 0}
 .on-navy h2,.on-deep h2,.on-navy h3,.on-deep h3{color:var(--on-dark)}
 .accent{color:var(--gold-ink)}
 .on-navy .accent,.on-deep .accent,.hero .accent{color:var(--gold)}
+.split .lede{margin-top:16px}
 .head{display:grid;gap:16px;justify-items:start;max-width:640px}
-.lede{font-size:clamp(17px,4.6vw,19px);color:var(--soft);max-width:40ch}
+.lede{font-size:clamp(18px,4.8vw,20px);color:var(--soft);max-width:40ch}
 .on-navy .lede,.on-deep .lede{color:var(--on-dark-soft)}
 
 /* Eyebrow: a few key headings only. A label, not a button. */
@@ -88,8 +89,8 @@ section{padding:64px 0}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding-top:max(8px,env(safe-area-inset-top))}
 .brand{display:flex;flex-direction:column;justify-content:center;min-height:44px;text-decoration:none;line-height:1}
 .brand b{font:400 22px/1 var(--display);letter-spacing:.01em}
-.brand span{font:600 11px/1 var(--text);letter-spacing:.08em;white-space:nowrap;text-transform:uppercase;color:var(--soft);margin-top:5px}
-.reach{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 2px;font:400 17px/1 var(--display);text-decoration:none;white-space:nowrap}
+.brand span{font:600 12px/1 var(--text);letter-spacing:.08em;white-space:nowrap;text-transform:uppercase;color:var(--soft);margin-top:5px}
+.reach{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 2px;font:400 18px/1 var(--display);text-decoration:none;white-space:nowrap}
 .reach svg{width:20px;height:20px;flex:none;color:var(--navy)}
 
 /* ---------- Hero ---------- */
@@ -100,7 +101,7 @@ section{padding:64px 0}
 .hero h1 .w{display:inline-block;white-space:nowrap}
 .hero h1 .c{display:inline-block;opacity:0;transform:translateX(50px);animation:letter-in 1s cubic-bezier(.34,1.56,.64,1) forwards;animation-delay:calc(var(--i) * 20ms)}
 @keyframes letter-in{to{opacity:1;transform:none}}
-.promise{font-size:clamp(17px,4.7vw,20px);line-height:1.5;color:var(--on-dark-soft);max-width:32ch}
+.promise{font-size:clamp(18px,4.8vw,20px);line-height:1.5;color:var(--on-dark-soft);max-width:32ch}
 .actions{display:grid;gap:12px;width:100%;margin-top:4px}
 
 /* ---------- Care ---------- */
@@ -118,16 +119,15 @@ section{padding:64px 0}
 .arrow{width:44px;height:44px;flex:none;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.1);color:var(--on-dark);transition:background-color .2s,color .2s}
 .arrow svg{width:18px;height:18px}
 .row:focus-visible .arrow{background:var(--gold);color:var(--ink);outline:3px solid var(--gold);outline-offset:3px}
-.rows-note{margin-top:24px;max-width:44ch}
 
 /* ---------- Estimate ---------- */
 .ask .wrap{display:grid;gap:32px}
 .steps{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:18px;counter-reset:s}
-.steps li{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:center;counter-increment:s;font:400 19px/1.25 var(--display);color:var(--ink)}
-.steps li::before{content:counter(s);width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:var(--ink);font:400 19px/1 var(--display)}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:center;counter-increment:s;font:400 22px/1.2 var(--display);color:var(--ink)}
+.steps li::before{content:counter(s);width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:rgba(16,35,63,.08);color:var(--ink);font:400 20px/1 var(--display)}
 form{background:var(--card);border-radius:var(--r-card);padding:clamp(20px,5vw,32px);display:grid;gap:22px;max-width:600px;min-width:0}
 .field{display:grid;gap:8px;min-width:0}
-.field label,.field legend{font:400 17px/1.2 var(--display);color:var(--ink);padding:0}
+.field label,.field legend{font:400 18px/1.2 var(--display);color:var(--ink);padding:0}
 .field small{font:400 14px/1 var(--text);color:var(--soft);margin-left:4px}
 fieldset{border:0;margin:0;padding:0;min-width:0}
 fieldset legend{margin-bottom:8px}
@@ -141,18 +141,21 @@ input[type=text]:focus,textarea:focus{outline:none;border-color:var(--focus)}
 .chips input:focus-visible+label{border-color:var(--focus);outline:none}
 .chips input:checked+label{background:var(--ink);color:#fff}
 .chips input:checked:focus-visible+label{outline:3px solid var(--focus);outline-offset:3px}
-.err{display:none;font-size:15px;color:var(--error)}
+.err{display:none;font-size:16px;color:var(--error)}
 .field.bad .err{display:block}
 .field.bad input[type=text],.field.bad textarea{border-color:var(--error)}
 form .btn{width:100%}
 form .btn:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
-.after{font-size:15px;color:var(--soft)}
+.after{font-size:16px;color:var(--soft)}
 /* After send: the message is copied, then one button opens Messenger */
 .sent{display:grid;gap:14px;padding:18px;border-radius:16px;background:var(--field);color:var(--ink)}
 .sent p{font-weight:600}
-.sent pre{margin:0;white-space:pre-wrap;font:15px/1.5 var(--text);color:var(--body);background:var(--card);border-radius:var(--r-field);padding:12px 14px}
+.sent pre{margin:0;white-space:pre-wrap;font:16px/1.5 var(--text);color:var(--body);background:var(--card);border-radius:var(--r-field);padding:12px 14px}
 .sent .btn-ghost{color:var(--ink);border-color:var(--ink);min-height:48px}
-@media (max-width:380px){.chips label{padding:0 14px}}
+@media (max-width:380px){.chips{gap:8px}.chips label{padding:0 12px}}
+/* the pre-picked chip pulses once when a service row brings you here */
+.chips label.picked{animation:pick .9s ease-out}
+@keyframes pick{0%{box-shadow:0 0 0 0 rgba(31,74,122,.55)}100%{box-shadow:0 0 0 12px rgba(31,74,122,0)}}
 
 /* ---------- Close ---------- */
 .close .who{margin-top:14px;font-size:clamp(18px,5vw,20px);color:var(--on-dark-soft);max-width:34ch}
@@ -181,15 +184,16 @@ footer a{display:inline-flex;align-items:center;min-height:44px;color:var(--on-d
   :root{--gutter:40px}
   .top .wrap{min-height:76px}
   .brand b{font-size:25px}
-  .reach{font-size:19px}
+  .reach{font-size:20px}
   section{padding:96px 0}
-  .hero-copy{padding-top:96px;padding-bottom:112px}
   .promise{max-width:40ch}
   .actions{grid-auto-flow:column;justify-content:start;width:auto}
   .actions .btn{min-width:240px}
   .close .btn{min-width:300px}
 }
+@media (min-width:760px) and (min-height:600px){.hero-copy{padding-top:96px;padding-bottom:112px}}
 @media (min-width:1024px){
+  .hero h1{font-size:96px;max-width:14ch}
   .split{display:grid;grid-template-columns:1fr 1fr;column-gap:64px;align-items:start}
   .split .claims{margin-top:0}
   .rows{grid-template-columns:1fr 1fr}
@@ -215,13 +219,13 @@ footer a:hover{color:var(--gold)}
   html{scroll-behavior:auto}
   .js .rise,.float,.btn{transition:none}
   .js .rise.below{opacity:1;transform:none}
-  .hero h1 .c{animation:none;opacity:1;transform:none}
+  .hero h1 .c,.chips label.picked{animation:none;opacity:1;transform:none}
 }
 </style>
 </head>
 <body>
 <!--
-THESIS: A locally owned Ocean County cleaner whose whole business lived in one text-only Facebook post, given a calm, warm home of its own: what they clean, where, and one easy way to ask for the free estimate.
+THESIS: A locally owned Ocean County cleaner given a calm, warm home of its own: what they clean, where, and one easy way to ask for the free estimate.
 OWN-WORLD: Calm band style (after lpmr.co.uk). Off-white paper, harbour navy (#1f4a7a) and deep navy (#10233f, faint diagonal lines) bands, sparkle gold (#f5c64f, from the ✨ in their post) as the one warm accent, used as a fill; #7f5a00 when it has to be text on light. Cal Sans display, system body at 16/1.7.
 STORY: The visitor sees a local cleaner for their Ocean County home, believes they'll be careful and dependable with it, finds their kind of clean in the list, and sends a request for the free estimate.
 FIRST VIEWPORT: Paper header, wordmark left, "Message us" top right. Navy hero: eyebrow "Now accepting new clients", "Your Ocean County home, clean again.", their own promise line, two pill buttons (Get a free estimate, See what we clean).
@@ -257,12 +261,12 @@ FORM: calm band system without photos (none exist: text-only post, no logo). Con
   <div class="wrap split">
     <div class="rise">
       <h2 id="h-care">A clean home is <span class="nw">peace of mind.</span></h2>
-      <p class="lede" style="margin-top:16px">You're trusting us with the place you come home to. We clean it the way you like it, treat your things with care, and come back when we said we would.</p>
+      <p class="lede">You're trusting us with the place you come home to. We clean it the way you like it, treat your things with care, and come back when we said we would.</p>
     </div>
-    <ul class="claims">
-      <li class="rise"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 19 20 7l14 12"/><path d="M10 16v17h20V16"/><path d="M17 33v-9h6v9"/></svg>Locally owned and operated</li>
-      <li class="rise"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12h24M8 20h16M8 28h10"/><path d="m24 28 3.5 3.5L34 25"/></svg>Cleaning tailored to your home</li>
-      <li class="rise"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 5c1 6.5 3.5 9 10 10-6.5 1-9 3.5-10 10-1-6.5-3.5-9-10-10 6.5-1 9-3.5 10-10z"/><path d="M31 25c.5 3 1.6 4 4.5 4.5-2.9.5-4 1.6-4.5 4.5-.5-2.9-1.6-4-4.5-4.5 2.9-.5 4-1.5 4.5-4.5z"/></svg>Dependable and detail-oriented</li>
+    <ul class="claims rise">
+      <li><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 19 20 7l14 12"/><path d="M10 16v17h20V16"/><path d="M17 33v-9h6v9"/></svg>Locally owned and operated</li>
+      <li><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12h24M8 20h16M8 28h10"/><path d="m24 28 3.5 3.5L34 25"/></svg>Cleaning tailored to your home</li>
+      <li><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 5c1 6.5 3.5 9 10 10-6.5 1-9 3.5-10 10-1-6.5-3.5-9-10-10 6.5-1 9-3.5 10-10z"/><path d="M31 25c.5 3 1.6 4 4.5 4.5-2.9.5-4 1.6-4.5 4.5-.5-2.9-1.6-4-4.5-4.5 2.9-.5 4-1.5 4.5-4.5z"/></svg>Dependable and <span class="nw">detail-oriented</span></li>
     </ul>
   </div>
 </section>
@@ -270,14 +274,14 @@ FORM: calm band system without photos (none exist: text-only post, no logo). Con
 <section class="on-deep" id="services" aria-labelledby="h-services">
   <div class="wrap">
     <h2 id="h-services" class="rise">What we <span class="accent">clean.</span></h2>
-    <ul class="rows">
-      <li class="rise"><a class="row" href="#ask" data-pick="Home cleaning">Home cleaning<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-      <li class="rise"><a class="row" href="#ask" data-pick="Deep cleaning">Deep and detailed cleaning<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-      <li class="rise"><a class="row" href="#ask" data-pick="Regular cleaning">Weekly, biweekly or monthly<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-      <li class="rise"><a class="row" href="#ask" data-pick="Move-in / move-out">Move-in and move-out<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-      <li class="rise"><a class="row" href="#ask" data-pick="Airbnb turnover">Airbnb and vacation rental turnovers<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-      <li class="rise"><a class="row" href="#ask" data-pick="Office cleaning">Office and commercial<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-      <li class="rise"><a class="row" href="#ask" data-pick="One-time clean">One-time and special occasions<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+    <ul class="rows rise">
+      <li><a class="row" href="#ask" data-pick="Home cleaning">Home cleaning<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+      <li><a class="row" href="#ask" data-pick="Deep cleaning">Deep and detailed cleaning<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+      <li><a class="row" href="#ask" data-pick="Regular cleaning">Weekly, biweekly or monthly<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+      <li><a class="row" href="#ask" data-pick="Move-in / move-out">Move-in and move-out<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+      <li><a class="row" href="#ask" data-pick="Airbnb turnover">Airbnb and vacation rental turnovers<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+      <li><a class="row" href="#ask" data-pick="Office cleaning">Office and commercial<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+      <li><a class="row" href="#ask" data-pick="One-time clean">One-time and special occasions<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
     </ul>
   </div>
 </section>
@@ -297,13 +301,13 @@ FORM: calm band system without photos (none exist: text-only post, no logo). Con
       <fieldset class="field" id="f-what">
         <legend>What can we clean for you?</legend>
         <div class="chips">
-          <input type="radio" name="what" id="s1" value="Home cleaning"><label for="s1">Home cleaning</label>
-          <input type="radio" name="what" id="s2" value="Deep cleaning"><label for="s2">Deep cleaning</label>
-          <input type="radio" name="what" id="s3" value="Regular cleaning"><label for="s3">Weekly, biweekly or monthly</label>
-          <input type="radio" name="what" id="s4" value="Move-in / move-out"><label for="s4">Move-in / move-out</label>
-          <input type="radio" name="what" id="s5" value="Airbnb turnover"><label for="s5">Airbnb turnover</label>
-          <input type="radio" name="what" id="s6" value="Office cleaning"><label for="s6">Office</label>
-          <input type="radio" name="what" id="s7" value="One-time clean"><label for="s7">One-time</label>
+          <input type="radio" name="what" id="s1" value="Home cleaning" aria-describedby="e-what"><label for="s1">Home cleaning</label>
+          <input type="radio" name="what" id="s2" value="Deep cleaning" aria-describedby="e-what"><label for="s2">Deep cleaning</label>
+          <input type="radio" name="what" id="s3" value="Regular cleaning" aria-describedby="e-what"><label for="s3">Weekly, biweekly or monthly</label>
+          <input type="radio" name="what" id="s4" value="Move-in / move-out" aria-describedby="e-what"><label for="s4">Move-in / move-out</label>
+          <input type="radio" name="what" id="s7" value="One-time clean" aria-describedby="e-what"><label for="s7">One-time</label>
+          <input type="radio" name="what" id="s5" value="Airbnb turnover" aria-describedby="e-what"><label for="s5">Airbnb turnover</label>
+          <input type="radio" name="what" id="s6" value="Office cleaning" aria-describedby="e-what"><label for="s6">Office</label>
         </div>
         <p class="err" id="e-what">Pick the kind of clean you need, or the closest one.</p>
       </fieldset>
@@ -320,14 +324,14 @@ FORM: calm band system without photos (none exist: text-only post, no logo). Con
         <label for="notes">Anything we should know? <small>(optional)</small></label>
         <textarea id="notes" name="notes" maxlength="600" placeholder="Bedrooms and bathrooms, pets, the day that suits you…"></textarea>
       </div>
-      <button class="btn btn-primary" type="submit" id="sendBtn"><svg aria-hidden="true"><use href="#i-messenger"/></svg><span>Send on Messenger</span></button>
+      <button class="btn btn-primary" type="submit" id="sendBtn"><svg aria-hidden="true"><use href="#i-messenger"/></svg><span>Write my Messenger message</span></button>
       <div class="sent" id="sent" role="status" hidden>
         <p id="sentHead">Your message is copied. Open Messenger, paste it and send.</p>
         <pre id="sentMsg"></pre>
         <a class="btn btn-primary" id="openMsg" data-reach href="https://m.me/100006322602656" rel="noopener"><svg aria-hidden="true"><use href="#i-messenger"/></svg><span>Open Messenger</span></a>
         <button class="btn btn-ghost" type="button" id="copyMsg">Copy message again</button>
       </div>
-      <p class="after" id="after">We'll write your message for you. You send it from Messenger.</p>
+      <p class="after" id="after">We write the message and copy it. You paste it into Messenger and send.</p>
     </form>
   </div>
 </section>
@@ -339,14 +343,14 @@ FORM: calm band system without photos (none exist: text-only post, no logo). Con
       <p class="who">Bringing the comfort back home, one clean space at a time.</p>
       <p class="area">Serving Ocean County, NJ, and the surrounding areas.</p>
     </div>
-    <a class="btn btn-primary rise" id="reachClose" data-reach href="https://m.me/100006322602656" rel="noopener"><svg aria-hidden="true"><use href="#i-messenger"/></svg><span>Message us on Facebook</span></a>
+    <a class="btn btn-primary rise" id="reachClose" data-reach href="https://m.me/100006322602656" rel="noopener"><svg aria-hidden="true"><use href="#i-messenger"/></svg><span>Message us on Messenger</span></a>
   </div>
 </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <span>Home Again Cleaning Services · Ocean County, NJ<span id="footTel"></span></span>
+    <span>© 2026 Home Again LLC<span id="footTel"></span></span>
     <nav aria-label="Contact">
       <a href="https://www.facebook.com/profile.php?id=100006322602656" rel="noopener">Facebook</a>
     </nav>
@@ -410,7 +414,7 @@ document.documentElement.classList.add('js');
   [].forEach.call(document.querySelectorAll('[data-pick]'),function(a){
     a.addEventListener('click',function(){
       var r=document.querySelector('#estForm input[value="'+a.getAttribute('data-pick')+'"]');
-      if(r){r.checked=true;document.getElementById('f-what').classList.remove('bad')}
+      if(r){r.checked=true;r.dispatchEvent(new Event('change',{bubbles:true}));var l=r.nextElementSibling;l.classList.remove('picked');setTimeout(function(){l.classList.add('picked')},450)}
     });
   });
 })();
@@ -421,15 +425,18 @@ document.documentElement.classList.add('js');
   var msg='';
   // copy the message; tell() reports the result (sync in-app fallback first, then the async clipboard)
   function copy(tell){
-    var t=document.createElement('textarea'),ok=false;t.value=msg;t.setAttribute('readonly','');t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();
+    var t=document.createElement('textarea'),ok=false;t.value=msg;t.setAttribute('readonly','');t.style.position='fixed';t.style.opacity='0';t.style.fontSize='16px';document.body.appendChild(t);t.select();t.setSelectionRange(0,msg.length);
     try{ok=document.execCommand('copy')}catch(e){}
     t.remove();
     if(ok||!(navigator.clipboard&&window.isSecureContext)){tell(ok);return}
     navigator.clipboard.writeText(msg).then(function(){tell(true)},function(){tell(false)});
   }
   function head(t){document.getElementById('sentHead').textContent=t}
-  form.addEventListener('change',function(e){var f=e.target.closest('.field');if(f)f.classList.remove('bad')});
-  form.addEventListener('input',function(e){var f=e.target.closest('.field');if(f&&f.classList.contains('bad')&&e.target.value.trim())f.classList.remove('bad')});
+  // editing after the message was written puts the button back, so a stale message never gets sent
+  function reset(){if(document.getElementById('sent').hidden)return;document.getElementById('sent').hidden=true;document.getElementById('sendBtn').hidden=false;document.getElementById('after').hidden=false}
+  form.addEventListener('change',function(e){var f=e.target.closest('.field');if(f)f.classList.remove('bad');if(e.target.name==='what')setRadios(false);reset()});
+  form.addEventListener('input',function(e){var f=e.target.closest('.field');if(f&&f.classList.contains('bad')&&e.target.value.trim())f.classList.remove('bad');reset()});
+  function setRadios(bad){[].forEach.call(form.querySelectorAll('input[name=what]'),function(x){x.setAttribute('aria-invalid',bad?'true':'false')})}
   document.getElementById('copyMsg').addEventListener('click',function(){
     copy(function(ok){head(ok?'Copied again. Open Messenger, paste it and send.':"Couldn't copy here. Press and hold the message above to copy it.")});
   });
@@ -438,7 +445,7 @@ document.documentElement.classList.add('js');
     var w=form.querySelector('input[name=what]:checked'),name=document.getElementById('name').value.trim(),
         town=document.getElementById('town').value.trim(),notes=document.getElementById('notes').value.trim();
     var f1=document.getElementById('f-what'),f2=document.getElementById('f-name');
-    f1.classList.toggle('bad',!w);f2.classList.toggle('bad',!name);
+    f1.classList.toggle('bad',!w);f2.classList.toggle('bad',!name);setRadios(!w);
     document.getElementById('name').setAttribute('aria-invalid',name?'false':'true');
     if(!w){form.querySelector('input[name=what]').focus();return}
     if(!name){document.getElementById('name').focus();return}
@@ -447,7 +454,7 @@ document.documentElement.classList.add('js');
     if(notes)msg+=' '+notes;
     if(CONFIG.PHONE){location.href='sms:'+CONFIG.PHONE+'?&body='+encodeURIComponent(msg);return}
     document.getElementById('sentMsg').textContent=msg;
-    copy(function(ok){head(ok?'Your message is copied. Open Messenger, paste it and send.':'Press and hold the message to copy it, then open Messenger and paste it.')});
+    copy(function(ok){head(ok?'Your message is copied. Open Messenger and paste it. If nothing pastes, press and hold the message above to copy it.':'Press and hold the message to copy it, then open Messenger and paste it.')});
     document.getElementById('sent').hidden=false;document.getElementById('sendBtn').hidden=true;document.getElementById('after').hidden=true;
     document.getElementById('openMsg').focus();
   });

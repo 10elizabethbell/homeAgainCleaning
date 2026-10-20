@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T19:39:10.799Z",
+        "reason": "Pitch-site house style: calm-photo-style.md item 2 (Ellie, 2026-10-19) mandates the faint 135deg band texture"
+      }
+    ]
+  }
+}
